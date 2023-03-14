@@ -110,26 +110,38 @@ application_df['CLASSIFICATION'].value_counts()
 ```
 
 # Step 2: Compile, Train, and Evaluate the Model
-Need Help With This
+![](Resources/define_model.jpg)
+
+```python
+# Evaluate the model using the test data
+model_loss, model_accuracy = nn.evaluate(X_test_scaled,y_test,verbose=2)
+print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
+
+268/268 - 1s - loss: 0.5604 - accuracy: 0.7285 - 561ms/epoch - 2ms/step
+Loss: 0.560379683971405, Accuracy: 0.7285131216049194
+```
 
 # Step 3: Optimize the Model
-Need Help With This
+
 
 
 # Step 4: Write a Report on the Neural Network Model
 ## Overview of the analysis: 
-Explain the purpose of the analysis
+Using the data provided from the Alphabet Soup foundation, we can come up with a tool that will help to identify whether future funding applicants will be successful in the ventures.
 
 ## Results
 ### Data Preprocessing
 * What variable(s) are the target(s) for your model?
 
-The target variable is the "IS_SUCCESSFUL" column
+        The target variable is the "IS_SUCCESSFUL" column
+
 * What variable(s) are the features for your model?
-The features/independent variables include ask amount application type, organization type, and income amount
+
+        The features/independent variables include ask amount, application type, organization type, and income amount
 
 * What variable(s) should be removed from the input data because they are neither targets nor features?
-Variables that were removed were EIN, Name, Status, Special Considerations. Others that could potentiall be removed are Affiliation and Use Case
+
+        Variables that were removed were EIN, Name, Status, Special Considerations. Others that could potentially be removed are Affiliation and Use Case
 ### Compiling, Training, and Evaluating the Model
 * How many neurons, layers, and activation functions did you select for your neural network model, and why?
 * Were you able to achieve the target model performance?
